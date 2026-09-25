@@ -16,7 +16,7 @@ import {
 export default function Footer() {
   const [copied, setCopied] = useState(false);
 
-  const email = "your-email@example.com";
+  const email = "your-princerewa2002@gmail.com";
 
   const copyEmail = async () => {
     try {

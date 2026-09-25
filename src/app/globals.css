@@ -109,6 +109,9 @@ a {
 .smalldi{
   color:#55406e;
 }
+.herodi{
+  color:#666;
+}
 
 .hero h2 {
   font-size: 28px;
@@ -143,6 +146,9 @@ a {
 
 .secondary-btn {
   border: 1px solid #8b5cf6;
+}
+.section-heading h2{
+  color: #242424;
 }
 
 .socials {
@@ -303,12 +309,12 @@ a {
   padding: 12px 18px;
   border: 1px solid #292929;
   border-radius: 8px;
-  color: #bbb;
+  color: #aaaaaaaf;
 }
 
 .skill:hover {
-  border-color: #8b5cf6;
-  color: white;
+  border-color:red;
+  color: #333;
 }
 
 /* PROJECTS */

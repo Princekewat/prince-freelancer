@@ -34,7 +34,7 @@ export default function Services() {
 
       <div className="section-heading">
         <p>WHAT I DO</p>
-        <h2>
+        <h2 >
           Services I provide
         </h2>
       </div>

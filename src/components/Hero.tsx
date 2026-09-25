@@ -21,7 +21,7 @@ export default function Hero() {
           <span> Kewat</span>
         </h1>
 
-        <h2>
+        <h2 className="herodi">
           Next.js Developer & Freelancer
         </h2>
 

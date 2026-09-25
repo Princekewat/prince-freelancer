@@ -21,7 +21,7 @@ export default function Skills() {
         <p>MY TOOLKIT</p>
 
         <h2>
-          Technologies I work with
+          Technologies I worked with and tools I use to build modern web applications.
         </h2>
       </div>
 
