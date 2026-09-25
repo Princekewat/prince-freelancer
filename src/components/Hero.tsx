@@ -16,7 +16,7 @@ export default function Hero() {
           HELLO, I am a website creator & Freelancer
         </p>
 
-        <h1>
+        <h1 className="smalldi">
            Let&apos;s build something
           <span> Kewat</span>
         </h1>

@@ -34,7 +34,7 @@ export default function Booking() {
         </a>
 
         <a
-          href="mailto:prince.kewat@example.com?subject=Project%20meeting"
+          href="mailto:princerewa2002@gmail.com?subject=Project%20meeting"
           className="secondary-btn"
         >
           <Calendar size={18} />
