@@ -26,7 +26,7 @@ export default function Booking() {
       <div className="booking-buttons">
 
         <a
-          href="mailto:prince.kewat@example.com"
+          href="mailto:prince2002@gmail.com"
           className="primary-btn"
         >
           <MessageCircle size={18} />
