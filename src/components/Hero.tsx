@@ -18,7 +18,7 @@ export default function Hero() {
 
         <h1 className="smalldi">
            Let&apos;s build something
-          <span>awesome web applications</span>
+          <span>web applications</span>
         </h1>
 
         <h2 className="herodi">
