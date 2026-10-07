@@ -253,7 +253,7 @@ a {
 .project-card,
 .review-card {
   border: 1px solid #242424;
-  background: green;
+  background: #111827;
   border-radius: 18px;
   padding: 30px;
   transition: .3s;
@@ -354,12 +354,35 @@ a {
   letter-spacing: 4px;
 }
 
+.review-card {
+  color: #111827;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.review-card:nth-child(1) {
+  background: linear-gradient(135deg, #fef3c7, #fcd34d);
+}
+
+.review-card:nth-child(2) {
+  background: linear-gradient(135deg, #dbeafe, #93c5fd);
+}
+
+.review-card:nth-child(3) {
+  background: linear-gradient(135deg, #dcfce7, #86efac);
+}
+
 .review-card h4 {
   margin-top: 25px;
+  color: #111827;
+}
+
+.review-card p {
+  color: #374151;
 }
 
 .review-card span {
-  color: #666;
+  color: #4b5563;
   font-size: 13px;
 }
 
