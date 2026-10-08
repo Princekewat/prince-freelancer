@@ -20,7 +20,7 @@ export default function Navbar() {
       </div>
 
       <a href="#contact" className="nav-button">
-          let Talk
+        Let&apos;s talk
       </a>
 
     </nav>
