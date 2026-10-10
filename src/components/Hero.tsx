@@ -5,6 +5,9 @@ import { ArrowRight, Code2, Globe2 } from "lucide-react";
 export default function Hero() {
   return (
     <section className="hero">
+      <div className="hero-ambient hero-ambient-one" aria-hidden="true" />
+      <div className="hero-ambient hero-ambient-two" aria-hidden="true" />
+
       <div className="hero-content">
 
         <div className="status">
@@ -69,6 +72,9 @@ export default function Hero() {
       <div className="hero-card">
 
         <div className="card-glow"></div>
+        <div className="card-grid" aria-hidden="true"></div>
+        <div className="orb orb-one" aria-hidden="true"></div>
+        <div className="orb orb-two" aria-hidden="true"></div>
 
         <div className="profile-circle">
           PK
