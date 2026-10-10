@@ -4,9 +4,29 @@ import { ArrowRight, Code2, Globe2 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      onPointerMove={(event) => {
+        if (event.pointerType === "touch") return;
+
+        const bounds = event.currentTarget.getBoundingClientRect();
+        event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - bounds.left}px`);
+        event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - bounds.top}px`);
+        event.currentTarget.style.setProperty("--pointer-opacity", "1");
+      }}
+      onPointerLeave={(event) => {
+        event.currentTarget.style.setProperty("--pointer-opacity", "0");
+      }}
+    >
+      <div className="hero-pointer-glow" aria-hidden="true" />
       <div className="hero-ambient hero-ambient-one" aria-hidden="true" />
       <div className="hero-ambient hero-ambient-two" aria-hidden="true" />
+      <div className="hero-bubble bubble-large bubble-one" aria-hidden="true" />
+      <div className="hero-bubble bubble-small bubble-two" aria-hidden="true" />
+      <div className="hero-bubble bubble-medium bubble-three" aria-hidden="true" />
+      <div className="hero-bubble bubble-small bubble-four" aria-hidden="true" />
+      <div className="hero-bubble bubble-large bubble-five" aria-hidden="true" />
+      <div className="hero-cursor-dot" aria-hidden="true" />
 
       <div className="hero-content">
 

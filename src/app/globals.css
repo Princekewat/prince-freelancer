@@ -97,6 +97,9 @@ a {
 
 .hero {
   position: relative;
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  --pointer-opacity: 0;
   min-height: 90vh;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -109,6 +112,41 @@ a {
     linear-gradient(135deg, #07070d 0%, #0f1020 35%, #0b0b11 100%);
   overflow: hidden;
   perspective: 1200px;
+}
+
+.hero-content,
+.hero-card {
+  z-index: 1;
+}
+
+.hero-pointer-glow,
+.hero-cursor-dot {
+  position: absolute;
+  left: var(--pointer-x);
+  top: var(--pointer-y);
+  pointer-events: none;
+  opacity: var(--pointer-opacity);
+  transition: opacity 180ms ease;
+  z-index: 2;
+}
+
+.hero-pointer-glow {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.2), rgba(45, 212, 191, 0.08) 35%, transparent 70%);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+.hero-cursor-dot {
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  background: #c4b5fd;
+  box-shadow: 0 0 10px 3px rgba(167, 139, 250, 0.75), 0 0 24px 8px rgba(45, 212, 191, 0.28);
+  transform: translate(-50%, -50%);
 }
 
 .hero-ambient {
@@ -134,6 +172,77 @@ a {
   right: 10%;
   bottom: 12%;
   animation-delay: 2s;
+}
+
+.hero-bubble {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.78;
+  animation: floatBubble 9s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.bubble-small {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 35% 30%, #fff, #a78bfa 36%, rgba(139, 92, 246, 0.15) 75%);
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.75);
+}
+
+.bubble-medium {
+  width: 48px;
+  height: 48px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.9), rgba(45, 212, 191, 0.48) 35%, rgba(45, 212, 191, 0.05) 75%);
+  box-shadow: 0 0 32px rgba(45, 212, 191, 0.35);
+}
+
+.bubble-large {
+  width: 92px;
+  height: 92px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.8), rgba(167, 139, 250, 0.3) 28%, rgba(139, 92, 246, 0.04) 72%);
+  box-shadow: inset -8px -10px 24px rgba(139, 92, 246, 0.16), 0 0 42px rgba(139, 92, 246, 0.28);
+}
+
+.bubble-one {
+  top: 18%;
+  left: 52%;
+}
+
+.bubble-two {
+  top: 24%;
+  right: 12%;
+  animation-delay: 1s;
+}
+
+.bubble-three {
+  right: 43%;
+  bottom: 18%;
+  animation-delay: 2.5s;
+}
+
+.bubble-four {
+  left: 5%;
+  bottom: 20%;
+  animation-delay: 3s;
+}
+
+.bubble-five {
+  right: 4%;
+  bottom: 48%;
+  width: 58px;
+  height: 58px;
+  animation-delay: 1.8s;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.92);
+  }
+  100% {
+    transform: translate3d(14px, -24px, 28px) scale(1.08);
+  }
 }
 
 @keyframes floatAmbient {
@@ -357,6 +466,80 @@ a {
   padding: 100px 10%;
 }
 
+.services-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(34, 211, 238, 0.19), transparent 34%),
+    radial-gradient(ellipse at 85% 78%, rgba(59, 130, 246, 0.2), transparent 36%),
+    linear-gradient(145deg, #06151e, #0a2230 48%, #071521);
+}
+
+.services-section::before,
+.services-section::after {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.services-section::before {
+  background:
+    radial-gradient(ellipse at 30% 45%, rgba(34, 211, 238, 0.28), transparent 28%),
+    radial-gradient(ellipse at 65% 55%, rgba(14, 165, 233, 0.22), transparent 30%),
+    radial-gradient(ellipse at 50% 80%, rgba(45, 212, 191, 0.15), transparent 24%);
+  filter: blur(30px);
+  transform: rotate(-12deg) scale(1.1);
+  animation: waterFlow 18s ease-in-out infinite alternate;
+}
+
+.services-section::after {
+  inset: auto -10% -42% -10%;
+  height: 75%;
+  border-radius: 45% 55% 0 0 / 18% 22% 0 0;
+  background:
+    linear-gradient(165deg, transparent 12%, rgba(34, 211, 238, 0.12) 35%, rgba(14, 165, 233, 0.2) 54%, rgba(8, 47, 73, 0.45) 75%),
+    repeating-linear-gradient(172deg, transparent 0 34px, rgba(165, 243, 252, 0.09) 36px, transparent 39px 68px);
+  filter: blur(1px);
+  transform: rotate(-5deg);
+  animation: waterSurface 12s ease-in-out infinite alternate;
+}
+
+@keyframes waterFlow {
+  0% {
+    transform: translate3d(-3%, -2%, 0) rotate(-12deg) scale(1.1);
+  }
+  100% {
+    transform: translate3d(4%, 3%, 0) rotate(-5deg) scale(1.2);
+  }
+}
+
+@keyframes waterSurface {
+  0% {
+    transform: translateX(-2%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(3%) rotate(-2deg);
+  }
+}
+
+.services-section .section-heading,
+.services-section .services-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.services-section .section-heading p {
+  color: #a5f3fc;
+}
+
+.services-section .section-heading h2 {
+  color: #f0fdff;
+  text-shadow: 0 0 28px rgba(34, 211, 238, 0.25);
+}
+
 .section-heading {
   margin-bottom: 50px;
 }
@@ -397,11 +580,24 @@ a {
   transition: .3s;
 }
 
+.services-section .service-card {
+  border-color: rgba(165, 243, 252, 0.2);
+  background: linear-gradient(145deg, rgba(15, 38, 52, 0.78), rgba(9, 23, 36, 0.84));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 18px 45px rgba(1, 10, 18, 0.25);
+  backdrop-filter: blur(12px);
+}
+
 .service-card:hover,
 .project-card:hover,
 .review-card:hover {
   transform: translateY(-6px);
   border-color: #8b5cf6;
+}
+
+.services-section .service-card:hover {
+  transform: perspective(900px) translateY(-8px) rotateX(2deg);
+  border-color: rgba(103, 232, 249, 0.65);
+  box-shadow: 0 22px 48px rgba(2, 132, 199, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .service-icon {
@@ -413,6 +609,13 @@ a {
   border-radius: 12px;
   color: #a78bfa;
   margin-bottom: 25px;
+}
+
+.services-section .service-icon {
+  color: #a5f3fc;
+  background: linear-gradient(145deg, rgba(6, 182, 212, 0.2), rgba(37, 99, 235, 0.18));
+  border: 1px solid rgba(165, 243, 252, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 24px rgba(6, 182, 212, 0.1);
 }
 
 .service-card h3,
@@ -428,10 +631,22 @@ a {
   line-height: 1.7;
 }
 
+.services-section .service-card h3 {
+  color: #f0fdff;
+}
+
+.services-section .service-card p {
+  color: #b7ccd4;
+}
+
 .service-card a {
   display: inline-block;
   margin-top: 25px;
   color: #a78bfa;
+}
+
+.services-section .service-card a {
+  color: #67e8f9;
 }
 
 /* SKILLS */
@@ -751,7 +966,25 @@ a {
   .booking h2 {
     font-size: 35px;
   }
+
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ambient,
+  .hero-bubble,
+  .orb,
+  .hero-card,
+  .services-section::before,
+  .services-section::after {
+    animation: none;
+  }
+
+  .hero-pointer-glow,
+  .hero-cursor-dot {
+    display: none;
+  }
+}
+
 .footer {
   background: linear-gradient(
     135deg,
