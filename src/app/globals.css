@@ -720,41 +720,76 @@ a {
 
 /* REVIEWS */
 
+.reviews-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(34, 211, 238, 0.24), transparent 32%),
+    radial-gradient(ellipse at 100% 0%, rgba(244, 114, 182, 0.2), transparent 30%),
+    radial-gradient(ellipse at 0% 100%, rgba(251, 191, 36, 0.16), transparent 34%),
+    radial-gradient(ellipse at 100% 100%, rgba(45, 212, 191, 0.2), transparent 32%),
+    radial-gradient(ellipse at 50% 48%, rgba(99, 102, 241, 0.2), transparent 42%),
+    linear-gradient(180deg, #102b3b 0%, #111a32 48%, #291a37 100%);
+}
+
+.reviews-section .section-heading,
+.reviews-section .reviews-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.reviews-section .section-heading p {
+  color: #a5f3fc;
+}
+
+.reviews-section .section-heading h2 {
+  color: #f8fafc;
+  text-shadow: 0 0 28px rgba(129, 140, 248, 0.3);
+}
+
 .stars {
   color: #facc15;
   margin-bottom: 20px;
   letter-spacing: 4px;
 }
 
-.review-card {
-  color: #111827;
-  border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+.reviews-section .review-card {
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
 }
 
-.review-card:nth-child(1) {
-  background: linear-gradient(135deg, #fef3c7, #fcd34d);
+.reviews-section .review-card:nth-child(1) {
+  background: linear-gradient(145deg, rgba(8, 145, 178, 0.34), rgba(15, 23, 42, 0.78));
 }
 
-.review-card:nth-child(2) {
-  background: linear-gradient(135deg, #dbeafe, #93c5fd);
+.reviews-section .review-card:nth-child(2) {
+  background: linear-gradient(145deg, rgba(124, 58, 237, 0.34), rgba(15, 23, 42, 0.78));
 }
 
-.review-card:nth-child(3) {
-  background: linear-gradient(135deg, #dcfce7, #86efac);
+.reviews-section .review-card:nth-child(3) {
+  background: linear-gradient(145deg, rgba(13, 148, 136, 0.34), rgba(15, 23, 42, 0.78));
 }
 
-.review-card h4 {
+.reviews-section .review-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(165, 243, 252, 0.55);
+  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.32), 0 0 28px rgba(34, 211, 238, 0.12);
+}
+
+.reviews-section .review-card h4 {
   margin-top: 25px;
-  color: #111827;
+  color: #f8fafc;
 }
 
-.review-card p {
-  color: #374151;
+.reviews-section .review-card p {
+  color: #d5deea;
 }
 
-.review-card span {
-  color: #4b5563;
+.reviews-section .review-card span {
+  color: #aab8cc;
   font-size: 13px;
 }
 

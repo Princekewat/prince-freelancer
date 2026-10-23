@@ -18,7 +18,7 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section className="section">
+    <section className="section reviews-section">
 
       <div className="section-heading">
         <p>CLIENT FEEDBACK</p>
