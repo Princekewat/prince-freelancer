@@ -4,14 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   GitBranch,
-  Globe,
   Camera,
-  Mail,
   ArrowUp,
   Copy,
   Check,
   Heart,
 } from "lucide-react";
+import LinkedInIcon from "./LinkedInIcon";
+import GmailIcon from "./GmailIcon";
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
@@ -104,7 +104,7 @@ export default function Footer() {
             href={`mailto:${email}`}
             className="footer-email"
           >
-            <Mail size={18} />
+            <GmailIcon />
             Email Me
           </a>
 
@@ -143,7 +143,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <Globe size={20} />
+            <LinkedInIcon />
           </a>
 
           <a

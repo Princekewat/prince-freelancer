@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, Code2, Globe2 } from "lucide-react";
+import LinkedInIcon from "./LinkedInIcon";
 
 export default function Hero() {
   return (
@@ -81,8 +82,10 @@ export default function Hero() {
           <a
             href="https://linkedin.com/in/prince-kewat"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
-            <Globe2 size={20} />
+            <LinkedInIcon />
           </a>
 
         </div>
