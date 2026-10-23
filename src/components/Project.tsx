@@ -24,7 +24,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section projects-section">
 
       <div className="section-heading">
         <p>PORTFOLIO</p>

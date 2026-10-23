@@ -691,6 +691,153 @@ a {
 
 /* PROJECTS */
 
+.projects-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(34, 211, 238, 0.2), transparent 32%),
+    radial-gradient(ellipse at 100% 0%, rgba(244, 114, 182, 0.18), transparent 30%),
+    radial-gradient(ellipse at 0% 100%, rgba(251, 191, 36, 0.14), transparent 32%),
+    radial-gradient(ellipse at 100% 100%, rgba(45, 212, 191, 0.18), transparent 32%),
+    radial-gradient(ellipse at 52% 48%, rgba(124, 58, 237, 0.24), transparent 44%),
+    linear-gradient(160deg, #102b3b, #121a33 52%, #211933);
+}
+
+.projects-section::before,
+.projects-section::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.projects-section::before {
+  background:
+    radial-gradient(ellipse at 25% 35%, rgba(34, 211, 238, 0.28), transparent 25%),
+    radial-gradient(ellipse at 75% 65%, rgba(244, 114, 182, 0.24), transparent 28%),
+    radial-gradient(ellipse at 52% 50%, rgba(139, 92, 246, 0.22), transparent 35%);
+  filter: blur(42px);
+  animation: projectsGlow 12s linear infinite;
+}
+
+.projects-section::after {
+  inset: 12% -15% -42%;
+  background:
+    linear-gradient(rgba(165, 243, 252, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(165, 243, 252, 0.12) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 76%, transparent);
+  opacity: 0.42;
+  transform: perspective(700px) rotateX(58deg);
+  transform-origin: center bottom;
+  animation: projectsGrid 8s linear infinite;
+}
+
+@keyframes projectsGlow {
+  0% {
+    transform: perspective(900px) translate3d(-3%, -2%, 0) rotateX(12deg) rotateY(-8deg) rotateZ(0deg) scale(1);
+    filter: blur(42px) hue-rotate(0deg);
+  }
+  25% {
+    transform: perspective(900px) translate3d(0, 2%, 0) rotateX(0deg) rotateY(8deg) rotateZ(90deg) scale(1.08);
+    filter: blur(46px) hue-rotate(90deg);
+  }
+  50% {
+    transform: perspective(900px) translate3d(3%, 2%, 0) rotateX(-10deg) rotateY(8deg) rotateZ(180deg) scale(1.12);
+    filter: blur(42px) hue-rotate(180deg);
+  }
+  75% {
+    transform: perspective(900px) translate3d(0, -2%, 0) rotateX(0deg) rotateY(-8deg) rotateZ(270deg) scale(1.08);
+    filter: blur(46px) hue-rotate(270deg);
+  }
+  100% {
+    transform: perspective(900px) translate3d(-3%, -2%, 0) rotateX(12deg) rotateY(-8deg) rotateZ(360deg) scale(1);
+    filter: blur(42px) hue-rotate(360deg);
+  }
+}
+
+@keyframes projectsGrid {
+  0% {
+    transform: perspective(700px) rotateX(58deg);
+    background-position: 0 0;
+  }
+  50% {
+    transform: perspective(700px) rotateX(62deg);
+    background-position: 27px 27px;
+  }
+  100% {
+    transform: perspective(700px) rotateX(58deg);
+    background-position: 54px 54px;
+  }
+}
+
+.projects-section .section-heading,
+.projects-section .projects-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section .section-heading p {
+  color: #a5f3fc;
+}
+
+.projects-section .section-heading h2 {
+  color: #f8fafc;
+  text-shadow: 0 0 28px rgba(129, 140, 248, 0.3);
+}
+
+.projects-section .project-card {
+  position: relative;
+  transform-style: preserve-3d;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.projects-section .project-card:nth-child(1) {
+  background: linear-gradient(145deg, rgba(8, 145, 178, 0.34), rgba(15, 23, 42, 0.82));
+}
+
+.projects-section .project-card:nth-child(2) {
+  background: linear-gradient(145deg, rgba(124, 58, 237, 0.34), rgba(15, 23, 42, 0.82));
+}
+
+.projects-section .project-card:nth-child(3) {
+  background: linear-gradient(145deg, rgba(13, 148, 136, 0.34), rgba(15, 23, 42, 0.82));
+}
+
+.projects-section .project-card:hover {
+  transform: perspective(1000px) translateY(-8px) rotateX(3deg) rotateY(-2deg);
+  border-color: rgba(165, 243, 252, 0.55);
+  box-shadow: 0 26px 50px rgba(2, 6, 23, 0.34), 0 0 30px rgba(34, 211, 238, 0.13);
+}
+
+.projects-section .project-card:nth-child(2):hover {
+  transform: perspective(1000px) translateY(-8px) rotateX(3deg) rotateY(2deg);
+}
+
+.projects-section .project-number,
+.projects-section .project-category {
+  color: #a5f3fc;
+}
+
+.projects-section .project-card h3 {
+  color: #f8fafc;
+}
+
+.projects-section .project-card > p:not(.project-category) {
+  color: #d5deea;
+}
+
+.projects-section .tech-list span {
+  border-color: rgba(165, 243, 252, 0.22);
+  background: rgba(15, 23, 42, 0.34);
+  color: #dbeafe;
+}
+
 .project-number {
   color: #8b5cf6;
   font-size: 14px;
@@ -698,7 +845,7 @@ a {
 
 .project-category {
   margin-top: 40px;
-  color: #8b5cf6 !important;
+  color: #8b5cf6;
   font-size: 13px;
 }
 
@@ -1029,8 +1176,17 @@ a {
   .orb,
   .hero-card,
   .services-section::before,
-  .services-section::after {
+  .services-section::after,
+  .projects-section::before,
+  .projects-section::after {
     animation: none;
+  }
+
+  .projects-section .project-card,
+  .projects-section .project-card:hover,
+  .projects-section .project-card:nth-child(2):hover {
+    transform: none;
+    transition: none;
   }
 
   .hero-pointer-glow,
