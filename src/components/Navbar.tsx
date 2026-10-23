@@ -21,7 +21,27 @@ export default function Navbar() {
     <nav className="navbar">
 
       <Link href="/" className="logo" onClick={() => setMenuOpen(false)}>
-        PRINCE<span>.</span>
+        <svg
+          className="logo-mark"
+          viewBox="0 0 40 40"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M11 31V9h11a7 7 0 0 1 0 14h-6m0 0 10 8"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M29 7v6m-3-3h6"
+            stroke="#d8b4fe"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </svg>
+        <span className="logo-wordmark">PRINCE<span className="logo-period">.</span></span>
       </Link>
 
       <div className="nav-links">
