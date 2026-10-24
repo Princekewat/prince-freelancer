@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560" fill="none">
+  <defs>
+    <linearGradient id="background" x1="58" y1="24" x2="494" y2="548" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39226B"/>
+      <stop offset="1" stop-color="#10101F"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="167" y1="371" x2="399" y2="551" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#6D4AFF"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="216" y1="147" x2="348" y2="344" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5C9A5"/>
+      <stop offset="1" stop-color="#D99573"/>
+    </linearGradient>
+    <filter id="shadow" x="84" y="78" width="392" height="450" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="560" height="560" rx="40" fill="url(#background)"/>
+  <circle cx="280" cy="258" r="187" fill="#8B5CF6" fill-opacity=".12"/>
+  <circle cx="424" cy="138" r="52" fill="#2DD4BF" fill-opacity=".16"/>
+  <circle cx="121" cy="358" r="34" fill="#C4B5FD" fill-opacity=".12"/>
+  <path d="M114 499c17-82 76-132 166-132s149 50 166 132v21H114v-21Z" fill="#090812" fill-opacity=".52" filter="url(#shadow)"/>
+  <path d="M121 560c9-105 67-167 159-167s150 62 159 167H121Z" fill="url(#shirt)"/>
+  <path d="M244 349h72v67c0 20-16 36-36 36s-36-16-36-36v-67Z" fill="url(#skin)"/>
+  <path d="M193 210c0-65 36-105 87-105 58 0 91 43 91 111v40c0 61-42 107-91 107-49 0-87-47-87-107v-46Z" fill="url(#skin)"/>
+  <path d="M190 225c-16-79 25-140 94-140 68 0 104 47 94 129-16-12-28-34-35-60-35 26-84 40-144 39l-9 32Z" fill="#211833"/>
+  <path d="M211 249c9-8 21-8 30 0M319 249c9-8 21-8 30 0" stroke="#533C39" stroke-linecap="round" stroke-width="7"/>
+  <path d="M267 285c9 7 19 7 28 0" stroke="#9C554D" stroke-linecap="round" stroke-width="6"/>
+  <path d="M231 396c16 20 34 30 49 30s33-10 49-30l39 23-35 141H228l-35-141 38-23Z" fill="#EDE9FE" fill-opacity=".9"/>
+  <path d="M280 426v134" stroke="#6D4AFF" stroke-opacity=".45" stroke-width="5"/>
+  <circle cx="145" cy="158" r="5" fill="#C4B5FD"/>
+  <circle cx="410" cy="341" r="7" fill="#2DD4BF"/>
+  <path d="m414 184 7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2 7-14Z" fill="#C4B5FD" fill-opacity=".8"/>
+</svg>
