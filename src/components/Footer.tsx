@@ -124,7 +124,7 @@ export default function Footer() {
 
       <div className="footer-middle">
 
-        <Link href="/journey" className="footer-journey-link">
+        <Link href="/resume" className="footer-journey-link">
           <span>Follow my journey</span>
           <span className="footer-journey-cta">View my  story</span>
         </Link>

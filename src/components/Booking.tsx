@@ -11,14 +11,14 @@ export default function Booking() {
         </p>
 
         <h2>
-          let is  turn your idea
+          Let&apos;s turn your idea
           <br />
-          into a real product.
+          into something <span>extraordinary.</span>
         </h2>
 
         <p>
-          Tell me about your project, requirements and
-          timeline. I will ll get back to you with the next steps.
+          Tell me about your project, requirements, and timeline. I&apos;ll get
+          back to you with the next steps.
         </p>
 
       </div>
