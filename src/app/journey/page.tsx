@@ -39,8 +39,8 @@ export default function JourneyPage() {
           <figure className="journey-photo-figure">
             <Image
               className="journey-photo-image"
-              src="/journey-placeholder.svg"
-              alt="Temporary illustrated portrait placeholder"
+              src="/prince-photo.jpg"
+              alt="Portrait of Prince Kewat"
               width={280}
               height={280}
               priority
@@ -57,8 +57,7 @@ export default function JourneyPage() {
             A journey of learning, building, and growing through technology.
           </p>
           <p className="journey-photo-note">
-            This is a temporary illustration. Add your own photo as{" "}
-            <code>public/prince-photo.jpg</code> when you are ready.
+            My photo is now added and displayed from the public assets folder.
           </p>
         </div>
       </section>

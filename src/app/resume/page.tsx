@@ -22,8 +22,8 @@ export default function ResumePage() {
           <figure className="journey-photo-figure">
             <Image
               className="journey-photo-image"
-              src="/journey-placeholder.svg"
-              alt="Temporary illustrated portrait for Prince Kewat's resume"
+              src="/prince-photo.jpg"
+              alt="Portrait of Prince Kewat"
               width={280}
               height={280}
               priority
@@ -41,8 +41,7 @@ export default function ResumePage() {
             experiences with React, TypeScript, and clean code.
           </p>
           <p className="journey-photo-note">
-            Replace the temporary portrait by adding your photo at{" "}
-            <code>public/prince-photo.jpg</code>.
+            Profile photo is now using the correct public asset file.
           </p>
         </div>
       </section>
