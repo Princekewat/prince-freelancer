@@ -8,8 +8,8 @@ const teamMembers = [
     alt: "Portrait of Prince Kewat",
   },
   {
-    name: "Teammate Name",
-    position: "Your position",
+    name: "Pradeep Nayak",
+    position: "full stack devlopment",
     photo:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85",
     alt: "Sample teammate portrait",
