@@ -2,6 +2,7 @@ import {
   Code2,
   Database,
   Globe,
+  Search,
   Smartphone
 } from "lucide-react";
 
@@ -25,6 +26,11 @@ const services = [
     icon: Smartphone,
     title: "Responsive Design",
     text: "Fast websites that work perfectly on mobile, tablet and desktop."
+  },
+  {
+    icon: Search,
+    title: "SEO Optimization",
+    text: "Technical SEO, metadata, structured data and performance improvements to help search engines understand your website."
   }
 ];
 

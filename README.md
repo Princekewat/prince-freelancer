@@ -20,11 +20,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 ## MongoDB Contact Messages
 
-The contact form stores submissions in the `contacts` collection of the `prince_portfolio` database.
+The booking form stores submissions in the `contacts` collection of the `prince_portfolio` database. View them in the password-protected `/admin` page.
 
 1. Create a MongoDB Atlas cluster and database user, and allow your app's server IP in Network Access.
-2. Copy `.env.example` to `.env.local` and set `MONGODB_URI` to the Atlas connection string. Keep the URI private and do not add `.env.local` to source control.
-3. Start the app. The database and collection are created automatically when the first contact message is submitted.
+2. Set `MONGODB_URI` and `MONGODB_DB=prince_portfolio` in `.env.local`. Keep database credentials private and do not add `.env.local` to source control.
+3. Set `ADMIN_PASSWORD` to a private password with at least 12 characters and `ADMIN_SESSION_SECRET` to a random secret with at least 32 characters. Generate a secret with `node -e "console.log(require('node:crypto').randomBytes(32).toString('base64'))"`.
+4. Restart the app and open `/admin` to sign in. Contact messages are available only after MongoDB is configured.
+5. SMTP settings are optional. If configured, new submissions also send an email notification; a mail delivery failure does not prevent the message from appearing in the admin inbox.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
