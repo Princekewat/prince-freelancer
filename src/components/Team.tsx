@@ -25,7 +25,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section className="section team-section" aria-labelledby="team-heading">
+    <section id="team" className="section team-section" aria-labelledby="team-heading">
       <div className="section-heading">
         <p>MY TEAM</p>
         <h2 id="team-heading">The people behind the work</h2>

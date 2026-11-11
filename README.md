@@ -18,6 +18,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## MongoDB Contact Messages
+
+The contact form stores submissions in the `contacts` collection of the `prince_portfolio` database.
+
+1. Create a MongoDB Atlas cluster and database user, and allow your app's server IP in Network Access.
+2. Copy `.env.example` to `.env.local` and set `MONGODB_URI` to the Atlas connection string. Keep the URI private and do not add `.env.local` to source control.
+3. Start the app. The database and collection are created automatically when the first contact message is submitted.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
