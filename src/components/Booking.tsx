@@ -35,7 +35,10 @@ export default function Booking() {
       }
 
       form.reset();
-      setStatus({ type: "success", message: "Message sent. I’ll be in touch soon." });
+      setStatus({
+        type: "success",
+        message: "Thanks for your message! I'll connect with you soon.",
+      });
     } catch (error) {
       setStatus({
         type: "error",

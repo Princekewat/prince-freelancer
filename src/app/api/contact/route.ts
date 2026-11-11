@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getMongoClient } from "@/lib/mongodb";
+import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
@@ -31,20 +31,52 @@ export async function POST(request: Request) {
     );
   }
 
-  try {
-    const client = await getMongoClient();
-    const database = client.db(process.env.MONGODB_DB || "prince_portfolio");
+  const { SMTP_HOST, SMTP_USER, SMTP_PASS } = process.env;
+  const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
+  const SMTP_FROM = process.env.SMTP_FROM || SMTP_USER;
 
-    await database.collection("contacts").insertOne({
-      ...contact,
-      createdAt: new Date(),
+  if (
+    !SMTP_HOST ||
+    !SMTP_USER ||
+    !SMTP_PASS ||
+    !SMTP_FROM ||
+    !Number.isInteger(SMTP_PORT) ||
+    SMTP_PORT < 1 ||
+    SMTP_PORT > 65535
+  ) {
+    console.error("Contact email delivery is not configured");
+    return NextResponse.json(
+      { error: "Email delivery is unavailable. Please email princerewa2002@gmail.com directly." },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      secure: SMTP_PORT === 465,
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
+      },
     });
 
-    return NextResponse.json({ message: "Message sent successfully." });
+    await transporter.sendMail({
+      from: SMTP_FROM,
+      to: "princerewa2002@gmail.com",
+      replyTo: contact.email,
+      subject: `New portfolio inquiry from ${contact.name.replace(/[\r\n]/g, " ")}`,
+      text: `Name: ${contact.name}\nEmail: ${contact.email}\n\n${contact.message}`,
+    });
+
+    return NextResponse.json({
+      message: "Thanks for your message! I'll connect with you soon.",
+    });
   } catch (error) {
-    console.error("Failed to save contact message", error);
+    console.error("Failed to send contact email", error);
     return NextResponse.json(
-      { error: "Message could not be saved. Please try again later." },
+      { error: "Your message could not be sent. Please try again later." },
       { status: 503 },
     );
   }
