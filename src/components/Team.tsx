@@ -15,7 +15,7 @@ const teamMembers = [
     alt: "Sample teammate portrait",
   },
   {
-    name: "Teammate Name",
+    name: "Rounk Pawar",
     position: "Your position",
     photo:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85",

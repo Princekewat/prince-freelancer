@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         <p className="small-title">
-          HELLO, I am a website creator & Freelancer
+          HELLO, I am Prince Kewat, a website creator & Freelancer
         </p>
 
         <h1 className="smalldi">
