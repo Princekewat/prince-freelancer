@@ -804,6 +804,44 @@ a {
   color: #67e8f9;
 }
 
+.seo-page-heading h1 {
+  max-width: 900px;
+  color: #f0fdff;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.08;
+  text-shadow: 0 0 28px rgba(34, 211, 238, 0.25);
+}
+
+.seo-page-lede {
+  max-width: 760px;
+  margin-top: 20px;
+  color: #b7ccd4;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.seo-page-cta {
+  width: fit-content;
+  margin-top: 28px;
+  color: #fff;
+}
+
+.seo-page-next-step {
+  margin-top: 64px;
+}
+
+.seo-page-next-step h2 {
+  color: #f0fdff;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.seo-page-next-step p {
+  max-width: 680px;
+  margin-top: 14px;
+  color: #b7ccd4;
+  line-height: 1.8;
+}
+
 /* SKILLS */
 
 .skills-section {

@@ -5,6 +5,7 @@ import {
   Search,
   Smartphone
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -61,9 +62,9 @@ export default function Services() {
 
               <p>{service.text}</p>
 
-              <a href="#contact">
-                Start a project →
-              </a>
+              <Link href={service.title === "SEO Optimization" ? "/seo" : "#contact"}>
+                {service.title === "SEO Optimization" ? "Explore SEO services" : "Start a project →"}
+              </Link>
 
             </div>
           );

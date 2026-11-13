@@ -48,6 +48,7 @@ export default function Navbar() {
 
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
+        <Link href="/seo">SEO</Link>
         <Link href="/#team">My Team</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/contact">Contact</Link>
@@ -87,6 +88,7 @@ export default function Navbar() {
             <div className="mobile-menu-links">
               <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
               <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+              <Link href="/seo" onClick={() => setMenuOpen(false)}>SEO</Link>
               <Link href="/#team" onClick={() => setMenuOpen(false)}>My Team</Link>
               <Link href="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
               <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
